@@ -142,12 +142,25 @@ router.get("/day/:date", (req,res)=>{
     moment.locale('ru');
 });
 
-router.put("/fun4", (req, res)=>{
-    res.send({method: "PUT"});
+router.get("/fi/:f", function (req,res, next){
+function fib(n) {
+let a = 1;
+let b = 1;
+for (let i = 3; i <= n; i++) {
+let c = a + b;
+a = b;
+b = c;
+}
+return b;
+}
+var f = req.params.f;
+var g = fib(f);
+var result = "<div>"+ g +"</div>";
+res.send(result);
 });
 
-router.delete("/fun5", (req, res)=>{
-    res.send({method: "DELETE"});
+router.get("/text/:r/", function (req,res, next){
+var data = require('json!./ggg.json');
 });
 
-module.exports = router;
+module.exports= router;
