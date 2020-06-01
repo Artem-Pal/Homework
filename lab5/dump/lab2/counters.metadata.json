@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"lab2.counters"},{"v":{"$numberInt":"2"},"unique":true,"key":{"id":{"$numberInt":"1"},"reference_value":{"$numberInt":"1"}},"name":"id_1_reference_value_1","ns":"lab2.counters","background":true}],"uuid":"79809663a84a4408acd8b58a58253c89"}
